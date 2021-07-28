@@ -22,6 +22,7 @@ package logger4k.impl.slf4j
 
 import com.github.openEdgn.logger4k.LoggerFactory
 import org.junit.jupiter.api.Test
+import org.slf4j.MarkerFactory
 import java.io.IOException
 
 internal class SLF4JLoggerTest {
@@ -33,6 +34,9 @@ internal class SLF4JLoggerTest {
         logger.info("Hello World.")
         logger.info("Hello World, {} .", "dragon")
         logger.infoThrowable("Exception", IOException())
+        val m = MarkerFactory.getMarker("[Tracker]")
+        m.add(MarkerFactory.getMarker("[Tracker Impl]"))
+        getSLF4JLogger().info(m, "test: {}", 1)
     }
 
     @Test
