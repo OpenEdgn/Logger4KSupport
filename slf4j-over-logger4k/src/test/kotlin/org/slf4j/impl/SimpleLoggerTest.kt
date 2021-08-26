@@ -27,7 +27,7 @@ import org.junit.jupiter.api.Test
 internal class SimpleLoggerTest {
     @Test
     fun testAll() {
-        System.setProperty("logger.mini.level", "DEBUG")
+        System.setProperty("logger.level", "[*=debug]")
         val slF4JLogger = getSLF4JLogger()
         assertFalse(slF4JLogger.isTraceEnabled)
         slF4JLogger.trace("hello")

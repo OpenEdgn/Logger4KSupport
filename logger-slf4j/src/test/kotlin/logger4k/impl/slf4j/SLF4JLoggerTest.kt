@@ -21,6 +21,7 @@
 package logger4k.impl.slf4j
 
 import com.github.openEdgn.logger4k.LoggerFactory
+import logger.forward.slf4j.getSLF4JLogger
 import org.junit.jupiter.api.Test
 import org.slf4j.MarkerFactory
 import java.io.IOException
@@ -41,6 +42,7 @@ internal class SLF4JLoggerTest {
 
     @Test
     fun testDebug() {
+        println(logger.level)
         logger.debug("Hello World.")
         logger.debug("Hello World, {} .", "dragon")
         logger.debugThrowable("Exception", IOException())

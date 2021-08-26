@@ -14,18 +14,18 @@ val compileKotlin: KotlinCompile by tasks
 val compileJava: JavaCompile by tasks
 compileJava.destinationDirectory.set(compileKotlin.destinationDirectory.get())
 
-val slf4jVersion = "1.7.31"
+val slf4jVersion = "1.7.32"
 
 dependencies {
     implementation(kotlin("reflect"))
     implementation(kotlin("stdlib"))
-    compileOnly("com.github.OpenEdgn.Logger4K:logger-core:2.0.2")
+    compileOnly("com.github.OpenEdgn.Logger4K:logger-core:2.1.0")
     compileOnly("org.slf4j:slf4j-api:$slf4jVersion")
     testImplementation("org.slf4j:slf4j-api:$slf4jVersion")
     testImplementation("ch.qos.logback:logback-core:1.2.5")
     testImplementation("ch.qos.logback:logback-core:1.2.5")
-    testImplementation("com.github.OpenEdgn.Logger4K:logger-core:2.0.2")
     testImplementation("org.slf4j:slf4j-simple:$slf4jVersion")
+    testImplementation("com.github.OpenEdgn.Logger4K:logger-core:2.1.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
     testImplementation("org.junit.platform:junit-platform-launcher:1.6.2")
 }

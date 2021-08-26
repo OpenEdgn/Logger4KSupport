@@ -18,7 +18,7 @@
  * SOFTWARE.
  */
 
-package logger4k.impl.slf4j
+package logger.forward.slf4j
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

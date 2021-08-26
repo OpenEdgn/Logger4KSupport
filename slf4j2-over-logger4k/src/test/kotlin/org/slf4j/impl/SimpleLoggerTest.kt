@@ -28,7 +28,7 @@ import org.slf4j.MarkerFactory
 internal class SimpleLoggerTest {
     @Test
     fun testAll() {
-        System.setProperty("logger.mini.level", "DEBUG")
+        System.setProperty("logger.level", "[*=debug]")
         val slF4JLogger = getSLF4JLogger()
         val marker = MarkerFactory.getMarker("MARK")
         slF4JLogger.info(marker, "Show Mark")
