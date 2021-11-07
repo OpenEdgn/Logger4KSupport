@@ -19,13 +19,13 @@ val slf4jVersion = "2.0.0-alpha2"
 dependencies {
     implementation(kotlin("reflect"))
     implementation(kotlin("stdlib"))
-    compileOnly("com.github.OpenEdgn.Logger4K:logger-core:2.1.0")
+    compileOnly("com.github.OpenEdgn.Logger4K:logger-core:2.2.1")
     compileOnly("org.slf4j:slf4j-api:$slf4jVersion")
     testImplementation("org.slf4j:slf4j-api:$slf4jVersion")
-    testImplementation("com.github.OpenEdgn.Logger4K:logger-core:2.1.0")
-    testImplementation("com.github.OpenEdgn.Logger4K:logger-console:2.1.0")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
-    testImplementation("org.junit.platform:junit-platform-launcher:1.6.2")
+    testImplementation("com.github.OpenEdgn.Logger4K:logger-core:2.2.1")
+    testImplementation("com.github.OpenEdgn.Logger4K:logger-console:2.2.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    testImplementation("org.junit.platform:junit-platform-launcher:1.8.1")
 }
 
 tasks.test {
